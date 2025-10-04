@@ -1,0 +1,162 @@
+/* Smooth transitions */
+body, .container, input, button, .calendar, .calendar th, .calendar td {
+  transition: all 0.5s ease-in-out;
+}
+
+/* White Mode */
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #ffffff;
+  color: #121212;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  width: 500px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+  color: #121212;
+}
+
+input:focus {
+  border-color: #667eea;
+}
+
+button {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #764ba2;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.calendar {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.calendar th, .calendar td {
+  padding: 6px;
+  text-align: center;
+}
+
+.calendar td.highlight {
+  background: #ff4081;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #f1f1f1;
+}
+
+body.dark-mode .container {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  box-shadow: 0 8px 30px rgba(255,255,255,0.1);
+}
+
+body.dark-mode input {
+  background: #2c2c2c;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode input:focus {
+  border-color: #ff4081;
+}
+
+body.dark-mode button {
+  background: #333;
+  color: white;
+}
+
+body.dark-mode button:hover {
+  background: #ff4081;
+}
+
+body.dark-mode .calendar {
+  background: #2c2c2c;
+}
+
+body.dark-mode .calendar td.highlight {
+  background: #ff4081;
+  color: white;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
