@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" style="margin-bottom: 20px; display: flex; align-items: center; justify-content: flex-end;">
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider round"></span>
+      </label>
+      <span style="margin-left: 8px;">Dark Mode</span>
+    </div>
+
+    <h1>Age Calculator</h1>
+    <form id="ageForm">
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" required>
+
+      <label for="target">Target Date:</label>
+      <input type="date" id="target" required>
+
+      <button type="submit">Calculate Age</button>
+    </form>
+
+    <div id="output" class="result"></div>
+
+    <div class="calendars">
+      <div>
+        <h3>Birth Month</h3>
+        <div id="birthCalendar" class="calendar"></div>
+      </div>
+      <div>
+        <h3>Target Month</h3>
+        <div id="targetCalendar" class="calendar"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
